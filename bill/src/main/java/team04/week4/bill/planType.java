@@ -6,5 +6,5 @@ interface planType{
 	public int getIncludedMinute();
 	public double getFamilyDiscountRate();
 	public double getAdditionalLineRate();
-	public int test();
+	
 }
