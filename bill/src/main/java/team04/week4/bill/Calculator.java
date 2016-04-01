@@ -8,13 +8,11 @@ public class Calculator {
 	private planType plantype;
 	//privte userLines userlines;
 	
-	public double calculateBasicRate(Account account){
+	public double setUserAccount(Account account){
 	lineCount = account.getLineCount();
 	totalMinutesUsed = account.getTotalUsedMinutes();
 	plantype = account.getPlantype();
-	
-		
-		
 	}
+	public double calculateBasicRate(){
 	
 }
