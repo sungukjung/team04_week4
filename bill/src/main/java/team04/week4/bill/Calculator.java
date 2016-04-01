@@ -1,43 +1,48 @@
 package team04.week4.bill;
-import Account;
-import planType;
-import userLine;
+
 public class Calculator {
-	private planType plantype;
+	private planType userPlanType;
+	private User user;
+
 	private double billCharged;
-	private int User_Used_bill;
-	
-	private int lineCount;
-	private int totalMinutesUsed;
-		
-	private double BasieRate;
-	private double FamilyDiscountRate;
-	private double BasicMonthlyRate;
-	private double ExcessMonthlyRate;
-	private double AddtionalRate;
-	private double ExceededRate;
-	
-	//privte userLines userlines;
-	
-	public double setUserAccount(Account account){
-		lineCount = account.getLineCount();
-		totalMinutesUsed = account.getTotalUsedMinutes();
-		plantype = account.getPlantype();
-		BasieRate= account.getBasieRate();
+
+	Calculator(int line, int min, String plan) {
+		user = new User(line, min, plan);
+		if (plan.equals("silver")) {
+			userPlanType = new silverPlan();
+		}
+
+		else {
+			userPlanType = new goldPlan();
+		}
 	}
+
+
+	private double calculateBasicRate() {
+		}
+
+	private double calculateAdditionalRate() {
+		}
+
+	private double calculateExceededRate() {
+		}
 	
-	public double calculateBasicRate(){
-		BasieRate = plantype.getBasicMonthlyRate();
+	public double calculateTotalRate(){
+		billCharged = 
+		return billCharged;
 	}
-	
-	public double calculateAdditionalRate(){
-		AddtionalRate = plantype.getAdditionalLineRate();
+
+	class User {
+		int line;
+		int min;
+		String plan;
+
+		User(int line, int min, String plan) {
+			this.line = line;
+			this.min = min;
+			this.plan = plan;
+		}
+
 	}
-	
-	public double calculateExceededRate(){
-		ExceededRate = plantype.getExcessMinuteRate();
-	}
-	
-	
-	
+
 }
