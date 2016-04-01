@@ -19,9 +19,22 @@ public class Calculator {
 
 
 	private double calculateBasicRate() {
+			double BasicRate = userPlanType.getBasicMonthlyRate();
+			return BasicRate;
 		}
 
 	private double calculateAdditionalRate() {
+			double numberOfLine = user.line;
+			double additionalRate;
+			
+			if(numberOfLine >= 4) {
+				additionalRate = 2 * userPlanType.getAdditionalLineRate() + 5 * (user.line-3);
+			}
+			else {
+				additionalRate = (user.line-1) * userPlanType.getAdditionalLineRate();
+			}
+			
+			return additionalRate;
 		}
 
 	private double calculateExceededRate() {
