@@ -3,7 +3,7 @@ package team04.week4.bill;
 public class Calculator {
 	private planType userPlanType;
 	private User user;
-
+	private double ExceedRate = 0;
 	private double billCharged;
 
 	Calculator(int line, int min, String plan) {
@@ -17,16 +17,28 @@ public class Calculator {
 		}
 	}
 
-
 	private double calculateBasicRate() {
-		}
+	}
 
 	private double calculateAdditionalRate() {
+	}
+
+	private double calculateExceededRate(){
+		int ExceedMinute= user.min - IncludedMinutes;
+		int IncludedMinutes =userPlanType.getIncludedMinute();
+		int ExcessMinuteRate = userPlanType.getExcessMinuteRate();
+
+			if(0<ExceedMinute){
+				
+				ExceedRate = ExcessMinuteRate*ExceedMinute;
+				}
+			return 	ExceedRate;	
 		}
 
-	private double calculateExceededRate() {
-		}
 	
+
+	}
+
 	public double calculateTotalRate(){
 		billCharged = 
 		return billCharged;
