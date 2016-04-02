@@ -1,4 +1,4 @@
-package team04.week4.bill;
+package edu.team04.bill;
 
 import java.io.PrintStream;
 import java.util.Scanner;
