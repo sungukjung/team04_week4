@@ -43,7 +43,7 @@ public class App
         	
         	totalFee = cal.calculateTotalRate();
         	
-        	System.out.printf("your total fee is %.2f\n",totalFee);
+        	System.out.printf("your total fee is %.2f%n",totalFee);
         }        
     }
 }
