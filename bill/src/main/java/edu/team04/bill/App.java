@@ -2,6 +2,7 @@ package edu.team04.bill;
 
 import java.io.PrintStream;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 /**
  * Hello world!
@@ -21,36 +22,36 @@ public class App {
 		int lines;
 		double totalFee;
 		Calculator cal;
-		PrintStream out = System.out; // NOPMD
+		Logger log = Logger.getLogger(App.class.getName());
 
 		while (true) {
-			out.println("input your plan type(exit is 0)");
+			log.info("input your plan type(exit is 0)");
 
 			planType = scan.nextLine();
 			if ("0".equals(planType))
 				break;
 
-			out.println("your plan type is " + planType);
+			log.info("your plan type is " + planType);
 
-			out.println("input your usage(minutes)");
+			log.info("input your usage(minutes)");
 
 			minUsage = scan.nextLine();
 			min = Integer.parseInt(minUsage);
 
-			out.println("your plan usage is " + minUsage + " minutes");
+			log.info("your plan usage is " + minUsage + " minutes");
 
-			out.println("input your number of lines");
+			log.info("input your number of lines");
 
 			numberOfLines = scan.nextLine();
 			lines = Integer.parseInt(numberOfLines);
 
-			out.println("your line is " + numberOfLines);
+			log.info("your line is " + numberOfLines);
 
 			cal = new Calculator(lines, min, planType);
 
 			totalFee = cal.calculateTotalRate();
 
-			out.printf("your total fee is %.2f%n", totalFee);
+			log.info("your total fee is " + totalFee);
 		}
 	}
 }
