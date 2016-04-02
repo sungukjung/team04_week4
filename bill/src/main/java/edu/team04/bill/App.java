@@ -7,18 +7,15 @@ import java.util.Scanner;
  * Hello world!
  *
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        Scanner scan = new Scanner(System.in);
+public class App {
+    public static void main( String[] args ) {
+        Scanner scan = new Scanner(System.in); 
         String planType, minUsage, numberOfLines;
         int min, lines;
         double totalFee;
         Calculator cal;
         PrintStream out = System.out;
-        
-        
+       
         while(true){
         	out.println("input your plan type(exit is 0)");
         	
