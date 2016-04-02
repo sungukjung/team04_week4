@@ -5,6 +5,10 @@ public class Calculator {
 	private User user;
 	private double ExceedRate = 0;
 	private double billCharged;
+	final int familyDiscount = 4;
+	final int additionalLineDiscount = 2;
+	final int additionalLineFee = 5;
+	final int additionalLineBaseLine = 3;
 
 	Calculator(int line, int min, String plan) {
 		user = new User(line, min, plan);
@@ -18,16 +22,16 @@ public class Calculator {
 	}
 
 	private double calculateBasicRate() {
-		double BasicRate = userPlanType.getBasicMonthlyRate();
-		return BasicRate;
+		double basicRate = userPlanType.getBasicMonthlyRate();
+		return basicRate;
 	}
 
 	private double calculateAdditionalRate() {
 		double numberOfLine = user.line;
 		double additionalRate;
 
-		if (numberOfLine >= 4) {
-			additionalRate = 2 * userPlanType.getAdditionalLineRate() + 5 * (user.line - 3);
+		if (numberOfLine >= familyDiscount) {
+			additionalRate = additionalLineDiscount * userPlanType.getAdditionalLineRate() + additionalLineFee * (user.line - additionalLineBaseLine);
 		} else {
 			additionalRate = (user.line - 1) * userPlanType.getAdditionalLineRate();
 		}
@@ -36,11 +40,11 @@ public class Calculator {
 	}
 
 	private double calculateExceededRate() {
-		int ExceedMinute = user.min - userPlanType.getIncludedMinute();
+		int exceedMinute = user.min - userPlanType.getIncludedMinute();
 
-		if (0 < ExceedMinute) {
+		if (0 < exceedMinute) {
 
-			ExceedRate = userPlanType.getExcessMinuteRate() * ExceedMinute;
+			ExceedRate = userPlanType.getExcessMinuteRate() * exceedMinute;
 		}
 		return ExceedRate;
 	}
