@@ -15,7 +15,7 @@ public class Calculator {
 		else {
 			userPlanType = new goldPlan();
 		}
-	}
+	}  
 
 	private double calculatebasicrate() {
 		double basicrate = userPlanType.getBasicMonthlyRate();
