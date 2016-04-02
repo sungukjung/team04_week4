@@ -1,6 +1,23 @@
 # team04_week4
 
-To write our constraints.
 
-1. 회의시간을 준수한다.
-2. commit 가능성을 체크중.
+Root POM : bill/pom.xml
+Goals and options : package
+
+Analysis properties : sonar.sources=bill
+
+
+
+1. first input
+Type : String
+Value : “silver” or “gold”
+
+2. second input
+Type : int
+Value : int
+
+3. third input
+Type : int
+Value : int
+
+end : 0
