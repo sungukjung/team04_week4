@@ -1,4 +1,4 @@
-package team04.week4.bill;
+package edu.team04.bill;
 
 public class goldPlan implements planType {
 
