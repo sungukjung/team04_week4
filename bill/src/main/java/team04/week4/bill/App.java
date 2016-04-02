@@ -16,6 +16,7 @@ public class App
     public static void main( String[] args )
     {
         Scanner scan = new Scanner(System.in);
+<<<<<<< HEAD
         String planType;
         String minUsage;
         String numberOfLines;
@@ -24,6 +25,13 @@ public class App
         double totalFee;
         Calculator cal;
         PrintStream out = System.out; //NOPMD
+=======
+        String planType, minUsage, numberOfLines;
+        int min, lines;
+        double totalFee;
+        Calculator cal;
+        PrintStream out = System.out;
+>>>>>>> sungukjung-master
         
         
         while(true){
