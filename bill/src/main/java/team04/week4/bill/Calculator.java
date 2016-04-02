@@ -4,17 +4,23 @@ public class Calculator {
 	private planType userPlanType;
 	private User user;
 	private double ExceedRate = 0;
+	private double exceedRate = 0;
 	private double billCharged;
 
 	Calculator(int line, int min, String plan) {
 		user = new User(line, min, plan);
-		if (plan.equals("silver")) {
+		if ("silver".equals(plan)) {
 			userPlanType = new silverPlan();
 		}
 
 		else {
 			userPlanType = new goldPlan();
 		}
+	}
+
+	private double calculatebasicrate() {
+		double basicrate = userPlanType.getBasicMonthlyRate();
+		return basicrate;
 	}
 
 	private double calculateBasicRate() {
@@ -45,9 +51,15 @@ public class Calculator {
 		return ExceedRate;
 	}
 
-	public double calculateTotalRate(){
-		billCharged = calculateBasicRate()+calculateAdditionalRate()+calculateExceededRate();
-		return billCharged;
+	public double calculateTotalRate() {
+		billCharged = calculateBasicRate() + calculateAdditionalRate() + calculateExceededRate();
+		int exceedminute = user.min - userPlanType.getIncludedMinute();
+
+		if (0 < exceedminute) {
+
+			exceedRate = userPlanType.getExcessMinuteRate() * exceedminute;
+		}
+		return exceedRate;
 	}
 
 	class User {
