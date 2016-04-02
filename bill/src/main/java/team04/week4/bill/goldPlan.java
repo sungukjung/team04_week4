@@ -2,11 +2,11 @@ package team04.week4.bill;
 
 public class goldPlan implements planType {
 
-	public double basicRate = 49.95;
-	public int includedMinute = 1000;
-	public double excessRate = 0.45;
-	public double additionalLineRate = 14.5;
-	public double familyDiscountRate = 5;
+	private double basicRate = 49.95;
+	private int includedMinute = 1000;
+	private double excessRate = 0.45;
+	private double additionalLineRate = 14.5;
+	private double familyDiscountRate = 5;
 	
 	
 	public double getBasicMonthlyRate() {
