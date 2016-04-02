@@ -5,10 +5,10 @@ public class Calculator {
 	private User user;
 	private double exceedRate = 0;
 	private double billCharged;
-	final static int FAMILY_DISCOUNT = 4;
-	final static int ADDITIONAL_LINE_DISCOUNT = 2;
-	final static int ADDITIONAL_LINE_FEE = 5;
-	final static int ADDITIONAL_LINE_BASELINE = 3;
+	static final int FAMILY_DISCOUNT = 4;
+	static final int ADDITIONAL_LINE_DISCOUNT = 2;
+	static final int ADDITIONAL_LINE_FEE = 5;
+	static final int ADDITIONAL_LINE_BASELINE = 3;
 
 	Calculator(int line, int min, String plan) {
 		user = new User(line, min, plan);
@@ -20,7 +20,8 @@ public class Calculator {
 	}
 
 	private double calculateBasicRate() {
-		double basicRate = userPlanType.getBasicMonthlyRate();
+		double basicRate;
+		basicRate = userPlanType.getBasicMonthlyRate();
 		return basicRate;
 	}
 
