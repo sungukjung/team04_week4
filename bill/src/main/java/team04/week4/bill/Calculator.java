@@ -18,49 +18,35 @@ public class Calculator {
 	}
 
 	private double calculateBasicRate() {
-<<<<<<< HEAD
-			double BasicRate = userPlanType.getBasicMonthlyRate();
-			return BasicRate;
-		}
-
-	private double calculateAdditionalRate() {
-			double numberOfLine = user.line;
-			double additionalRate;
-			
-			if(numberOfLine >= 4) {
-				additionalRate = 2 * userPlanType.getAdditionalLineRate() + 5 * (user.line-3);
-			}
-			else {
-				additionalRate = (user.line-1) * userPlanType.getAdditionalLineRate();
-			}
-			
-			return additionalRate;
-		}
-=======
+		double BasicRate = userPlanType.getBasicMonthlyRate();
+		return BasicRate;
 	}
 
 	private double calculateAdditionalRate() {
-	}
->>>>>>> d30c0c9e65f19ab0e85c2e23c07c63fe40e95760
+		double numberOfLine = user.line;
+		double additionalRate;
 
-	private double calculateExceededRate(){
-		int ExceedMinute= user.min - IncludedMinutes;
-		int IncludedMinutes =userPlanType.getIncludedMinute();
-		int ExcessMinuteRate = userPlanType.getExcessMinuteRate();
-
-			if(0<ExceedMinute){
-				
-				ExceedRate = ExcessMinuteRate*ExceedMinute;
-				}
-			return 	ExceedRate;	
+		if (numberOfLine >= 4) {
+			additionalRate = 2 * userPlanType.getAdditionalLineRate() + 5 * (user.line - 3);
+		} else {
+			additionalRate = (user.line - 1) * userPlanType.getAdditionalLineRate();
 		}
 
-	
+		return additionalRate;
+	}
 
+	private double calculateExceededRate() {
+		int ExceedMinute = user.min - userPlanType.getIncludedMinute();
+
+		if (0 < ExceedMinute) {
+
+			ExceedRate = userPlanType.getExcessMinuteRate() * ExceedMinute;
+		}
+		return ExceedRate;
 	}
 
 	public double calculateTotalRate(){
-		billCharged = 
+		billCharged = calculateBasicRate()+calculateAdditionalRate()+calculateExceededRate();
 		return billCharged;
 	}
 
