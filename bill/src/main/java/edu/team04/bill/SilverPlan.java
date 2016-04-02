@@ -1,5 +1,6 @@
 package edu.team04.bill;
 
+// plantype for silver plan
 public class SilverPlan implements PlanType {
 	
 	private double basicRate = 29.95;
