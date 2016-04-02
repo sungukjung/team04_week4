@@ -1,6 +1,6 @@
-package team04.week4.bill;
+package edu.team04.bill;
 
-interface planType{
+interface PlanType{
 	public double getBasicMonthlyRate();
 	public double getExcessMinuteRate();
 	public int getIncludedMinute();

@@ -2,9 +2,8 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>team04.week4</groupId>
   <artifactId>bill</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.2</version>
   <packaging>jar</packaging>
 
   <name>bill</name>
@@ -22,4 +21,5 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <groupId>edu.team04</groupId>
 </project>
