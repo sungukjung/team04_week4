@@ -8,7 +8,7 @@ public class Calculator {
 
 	Calculator(int line, int min, String plan) {
 		user = new User(line, min, plan);
-		if (plan.equals("silver")) {
+		if ("silver".equals(plan)) {
 			userPlanType = new silverPlan();
 		}
 
