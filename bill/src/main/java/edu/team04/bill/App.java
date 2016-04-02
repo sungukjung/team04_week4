@@ -1,6 +1,5 @@
 package edu.team04.bill;
 
-import java.io.PrintStream;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
