@@ -16,7 +16,7 @@ public class App
         double totalFee;
         Calculator cal;
         
-        while(1){
+        while(true){
         	System.out.println("input your plan type(exit is 0)");
         	
         	planType = scan.nextLine();
@@ -39,11 +39,11 @@ public class App
         	
         	System.out.println("your line is "+numberOfLines);
         	
-        	cal = New Calculator(lines, min, planType);
+        	cal = new Calculator(lines, min, planType);
         	
         	totalFee = cal.calculateTotalRate();
         	
-        	System.out.println('your total fee is '+totalFee);
+        	System.out.println("your total fee is "+totalFee);
         }        
     }
 }
