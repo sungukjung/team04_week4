@@ -20,7 +20,7 @@ public class App
         
         
         while(true){
-        	System.out.println("input your plan type(exit is 0)");
+        	out.println("input your plan type(exit is 0)");
         	
         	planType = scan.nextLine();
         	if ( "0".equals(planType) )
