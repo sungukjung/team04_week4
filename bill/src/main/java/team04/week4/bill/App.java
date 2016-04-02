@@ -20,7 +20,7 @@ public class App
         	System.out.println("input your plan type(exit is 0)");
         	
         	planType = scan.nextLine();
-        	if ( planType.equals("0") )
+        	if ( "0".equals(planType) )
         		break;
         	
         	System.out.println("your plan type is "+planType);
@@ -43,7 +43,7 @@ public class App
         	
         	totalFee = cal.calculateTotalRate();
         	
-        	System.out.println("your total fee is "+totalFee);
+        	System.out.printf("your total fee is %.2f%n",totalFee);
         }        
     }
 }
