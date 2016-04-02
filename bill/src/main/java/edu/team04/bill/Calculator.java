@@ -1,7 +1,7 @@
 package edu.team04.bill;
 
 public class Calculator {
-	private planType userPlanType;
+	private PlanType userPlanType;
 	private User user;
 	private double ExceedRate = 0;
 	private double billCharged;
@@ -9,11 +9,11 @@ public class Calculator {
 	Calculator(int line, int min, String plan) {
 		user = new User(line, min, plan);
 		if ("silver".equals(plan)) {
-			userPlanType = new silverPlan();
+			userPlanType = new SilverPlan();
 		}
 
 		else {
-			userPlanType = new goldPlan();
+			userPlanType = new GoldPlan();
 		}
 	}
 
