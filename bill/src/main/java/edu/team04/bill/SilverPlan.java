@@ -1,27 +1,30 @@
 package edu.team04.bill;
 
-// plantype for silver plan
 public class SilverPlan implements PlanType {
-	
-	private double basicRate = 29.95;
-	private int includedMinute = 500;
-	private double additionalLineRate = 21.50;
-	private double excessRate = 0.54;
-	private double familyDiscountRate = 5;
-	
-	public double getBasicMonthlyRate(){
-		return basicRate;
+
+	private double silverBasicRate = 29.95;
+	private int silverIncludedMinute = 500;
+	private double silverAdditionalLineRate = 21.50;
+	private double silverExcessRate = 0.54;
+	private double silverFamilyDiscountRate = 5;
+
+	public double getBasicMonthlyRate() {
+		return silverBasicRate;
 	}
-	public double getExcessMinuteRate(){
-		return excessRate;
+
+	public double getExcessMinuteRate() {
+		return silverExcessRate;
 	}
-	public int getIncludedMinute(){
-		return includedMinute;
+
+	public int getIncludedMinute() {
+		return silverIncludedMinute;
 	}
-	public double getFamilyDiscountRate(){
-		return familyDiscountRate;
+
+	public double getFamilyDiscountRate() {
+		return silverFamilyDiscountRate;
 	}
-	public double getAdditionalLineRate(){
-		return additionalLineRate;
+
+	public double getAdditionalLineRate() {
+		return silverAdditionalLineRate;
 	}
 }
