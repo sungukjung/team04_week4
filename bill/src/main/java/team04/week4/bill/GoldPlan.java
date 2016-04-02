@@ -2,30 +2,29 @@ package team04.week4.bill;
 
 public class GoldPlan implements planType {
 
-	private double basicRate = 49.95;
-	private int includedMinute = 1000;
-	private double excessRate = 0.45;
-	private double additionalLineRate = 14.5;
-	private double familyDiscountRate = 5;
-	
-	
+	private double goldBasicRate = 49.95;
+	private int goldIncludedMinute = 1000;
+	private double goldExcessRate = 0.45;
+	private double goldAdditionalLineRate = 14.5;
+	private double goldFamilyDiscountRate = 5;
+
 	public double getBasicMonthlyRate() {
-		return basicRate;
+		return goldBasicRate;
 	}
 
 	public double getExcessMinuteRate() {
-		return excessRate;
-	}
-
-	public int getIncludedMinute() {
-		return includedMinute;
-	}
-
-	public double getFamilyDiscountRate() {
-		return familyDiscountRate;
+		return goldExcessRate;
 	}
 
 	public double getAdditionalLineRate() {
-		return additionalLineRate;
+		return goldAdditionalLineRate;
+	}
+
+	public int getIncludedMinute() {
+		return goldIncludedMinute;
+	}
+
+	public double getFamilyDiscountRate() {
+		return goldFamilyDiscountRate;
 	}
 }
