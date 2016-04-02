@@ -20,8 +20,9 @@ public class App {
         	out.println("input your plan type(exit is 0)");
         	
         	planType = scan.nextLine();
-        	if ( "0".equals(planType) )
+        	if ( "0".equals(planType) ){
         		break;
+        	}
         	
         	out.println("your plan type is "+planType);
         	

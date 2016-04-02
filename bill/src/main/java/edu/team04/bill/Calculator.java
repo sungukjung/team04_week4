@@ -3,7 +3,7 @@ package edu.team04.bill;
 public class Calculator {
 	private PlanType userPlanType;
 	private User user;
-	private double ExceedRate = 0;
+	private double exceedRate = 0;
 	private double billCharged;
 	final static int FAMILY_DISCOUNT = 4;
 	final static int ADDITIONAL_LINE_DISCOUNT = 2;
@@ -14,9 +14,7 @@ public class Calculator {
 		user = new User(line, min, plan);
 		if ("silver".equals(plan)) {
 			userPlanType = new SilverPlan();
-		}
-
-		else {
+		} else {
 			userPlanType = new GoldPlan();
 		}
 	}
@@ -44,9 +42,9 @@ public class Calculator {
 
 		if (0 < exceedMinute) {
 
-			ExceedRate = userPlanType.getExcessMinuteRate() * exceedMinute;
+			exceedRate = userPlanType.getExcessMinuteRate() * exceedMinute;
 		}
-		return ExceedRate;
+		return exceedRate;
 	}
 
 	public double calculateTotalRate(){
