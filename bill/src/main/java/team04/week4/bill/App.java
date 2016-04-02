@@ -9,14 +9,21 @@ import java.util.Scanner;
  */
 public class App 
 {
+	private App(){
+		
+	}
+	
     public static void main( String[] args )
     {
         Scanner scan = new Scanner(System.in);
-        String planType, minUsage, numberOfLines;
-        int min, lines;
+        String planType;
+        String minUsage;
+        String numberOfLines;
+        int min;
+        int lines;
         double totalFee;
         Calculator cal;
-        PrintStream out = System.out;
+        PrintStream out = System.out; //NOPMD
         
         
         while(true){
