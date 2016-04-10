@@ -1,6 +1,34 @@
 # team04_week4
 
-To write our constraints.
 
-1. 회의시간을 준수한다.
-2. commit 가능성을 체크중.
+#Jenkins Option
+
+
+Root POM : bill/pom.xml
+
+Goals and options : package
+
+Analysis properties : sonar.sources=bill
+
+#How to compile and run this project
+
+mvn package // on maven cli(at latest version) jar -cp bill-0.0.2.jar edu.team04.bill.App and follow the instruction below
+
+
+#first input
+
+Type : String
+
+Value : 'silver' or 'gold'
+
+#second input
+
+Value : the number of lines that your account have
+
+#third input
+
+Value : the number of lines that your account have
+
+#how to end this program
+
+just type '0' in first input
