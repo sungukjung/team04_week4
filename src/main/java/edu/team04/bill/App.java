@@ -9,7 +9,7 @@ import java.util.logging.Logger;
  */
 public class App {
 
-	public static void main(String[] args) {
+	public static void main(String userplantype,int usedminiute,int usinglines ) {
 		Scanner scan = new Scanner(System.in);
 		String planType;
 		String minUsage;
