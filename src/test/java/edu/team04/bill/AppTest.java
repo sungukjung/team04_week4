@@ -29,6 +29,7 @@ public class AppTest
      * Rigourous Test :-)
      */
     public void testApp(){
+    	App apt = new App("gold","111","11");
         assertTrue( true );
     }
     Calculator c = new Calculator();

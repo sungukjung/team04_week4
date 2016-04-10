@@ -1,6 +1,6 @@
 package edu.team04.bill;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 import java.util.logging.Logger;
 
 /**
@@ -9,8 +9,8 @@ import java.util.logging.Logger;
  */
 public class App {
 
-	public static void main(String userplantype,int usedminiute,int usinglines ) {
-		Scanner scan = new Scanner(System.in);
+	public static void main(String userplantype,String usedminiute,String usinglines ) {
+		//Scanner scan = new Scanner(System.in);
 		String planType;
 		String minUsage;
 		String numberOfLines;
@@ -23,7 +23,7 @@ public class App {
 		while (true) {
 			log.info("input your plan type(exit is 0)");
 
-			planType = scan.nextLine();
+			planType =userplantype;
 			if ("0".equals(planType))
 				break;
 
@@ -31,14 +31,14 @@ public class App {
 
 			log.info("input your usage(minutes)");
 
-			minUsage = scan.nextLine();
+			minUsage =usedminiute;
 			min = Integer.parseInt(minUsage);
 
 			log.info("your plan usage is " + minUsage + " minutes");
 
 			log.info("input your number of lines");
 
-			numberOfLines = scan.nextLine();
+			numberOfLines = usinglines;
 			lines = Integer.parseInt(numberOfLines);
 
 			log.info("your line is " + numberOfLines);
