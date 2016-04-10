@@ -8,9 +8,6 @@ import java.util.logging.Logger;
  *
  */
 public class App {
-	private App() {
-
-	}
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
